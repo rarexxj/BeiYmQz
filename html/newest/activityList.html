@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color:#eff2f7;">
+<div class="index-box">
+    <div class="index-header clearfix">
+        <a href="cityChoice.html">
+            <div class="index-banner-l fl">
+                <span class="index-banner-address fl">杭州</span>
+                <div class="index-banner-addresslogo fl"></div>
+            </div>
+        </a>
+        <a href="search.html">
+            <div class="index-banner-r fr">
+                <div class="index-bannerlogo2 fl"></div>
+                <!--<div class="index-bannerlogo3 fl"></div>-->
+            </div>
+        </a>
+        <div class="index-logo">
+
+        </div>
+    </div>
+    <div class="index-activity">
+        <div class="activityList-navbox">
+            <div class="activityList-nav active fl">按日期</div>
+            <div class="activityList-nav fl">按年龄</div>
+            <div class="activityList-navlogo"></div>
+        </div>
+        <div class="index-activity-mainbox">
+            <a href="details.html">
+                <div>
+                    <div class="index-activity-banner" style="background-image: url('../../img/img8.png')"></div>
+                    <span class="Newest-activity"></span>
+                </div>
+                <div class="index-activity-main">
+                    <div class="index-activity-introduce">推荐理由：让您孩子和您一起体验成长的快乐，无限快乐，无限快乐，无限快乐，无限快乐，无限快乐
+                    </div>
+                    <div class="index-activity-mainbottom clearfix">
+                        <div class="index-activity-mainbottom-l fl">
+                            <span class="fuhao fl">￥</span>
+                            <div class="index-activity-price fl">16000</div>
+                        </div>
+                        <div class="index-activity-mainbottom-r fr">
+                            <div class="index-activity-see fl">8888
+                            </div>
+                            <div class="index-activity-collection fl">123
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-activity-bottombg"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="index-navbox">
+    <ul class="index-nav clearfix">
+        <a href="../index.html">
+            <li class="index-nav1 fl">首页</li>
+        </a>
+        <a href="activityList.html">
+            <li class="index-nav2 active fl">活动列表</li>
+        </a>
+        <a href="../personCenter/personalCenter.html">
+            <li class="index-nav3 fl">我的</li>
+        </a>
+    </ul>
+</div>
+</body>
+
+<script>
+    $(function () {
+
+        //点击导航
+        clicknav()
+        function clicknav() {
+            $('.activityList-nav').on('click', function () {
+                $('.activityList-nav').removeClass('active');
+                $(this).addClass('active');
+            })
+        }
+
+        //字数超出省略
+        font();
+        function font() {
+            var _num = $('.index-activity-introduce').html();
+            if (_num.length > 50) {
+                $('.index-activity-introduce').html(_num.substr(0, 50) + '...');
+            }
+        }
+    })
+</script>
+</html>

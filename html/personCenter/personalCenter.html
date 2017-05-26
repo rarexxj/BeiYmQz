@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/plug-in/swiper.jquery.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color:#eff2f7;">
+<div class="index-box">
+    <div class="index-header clearfix personalCenter-header">
+        <a href="../newest/cityChoice.html">
+            <div class="index-banner-l fl">
+                <span class="index-banner-address fl">杭州</span>
+                <div class="index-banner-addresslogo fl"></div>
+            </div>
+        </a>
+        <a href="../newest/search.html">
+            <div class="index-banner-r fr">
+                <div class="index-bannerlogo2 fl"></div>
+                <!--<div class="index-bannerlogo3 fl"></div>-->
+            </div>
+        </a>
+        <div class="index-logo">
+
+        </div>
+    </div>
+    <div class="personalCenter-bannerbox">
+        <div class="personalCenter-banner">
+            <div class="personalCenter-bannerimg" style="background-image: url('../../img/img14.png')">
+                <div class="personalData-currentlevel fl personalCenter-car">
+                    <div class="personalData-currentlevelbox clearfix">
+                        <div class="personalData-levelquan fl">
+                            <div class="personalData-levelquanimg"
+                                 style="background-image: url('../../img/logo45.png')"></div>
+                        </div>
+                        <div class="fl marginl28 margintop20">
+                            <div class="personalData-levelname">星梦无尘</div>
+                            <div class="personalData-level">您当前是普通会员</div>
+                        </div>
+                    </div>
+                    <a href="signature.html">
+                        <div class="personalData-leveautograph">快来添加自己的个性签名吧！</div>
+                    </a>
+                    <a href="personalData.html">
+                        <div class="personalCenter-setting"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="orderList.html">
+        <div class="personalCenter-orderbox clearfix">
+            <div class="fl personalCenter-myorder">我的订单</div>
+            <div class="fr personalCenter-allorder">
+                查看全部订单
+            </div>
+        </div>
+    </a>
+    <div class="personalCenter-ordernav">
+        <ul class="clearfix">
+            <a href="##">
+                <li class="fuk">待付款
+                    <span class="newsnum">1</span>
+                </li>
+            </a>
+            <a href="##">
+                <li class="chux">待出行
+                    <span class="newsnum">2</span>
+                </li>
+            </a>
+            <a href="##">
+                <li class="pingj">待评价
+                    <span class="newsnum">3</span>
+                </li>
+            </a>
+            <a href="##">
+                <li class="allorder">全部订单
+                    <span class="newsnum">4</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="personalCenter-nav2 clearfix">
+        <ul class="fl">
+            <li class="shouc"></li>
+            <li class="yij"></li>
+            <li class="lianx"></li>
+            <li class="fenx"></li>
+            <li class="guany"></li>
+        </ul>
+        <ol class="fl">
+            <a href="../newest/collection.html">
+                <li>收藏</li>
+            </a>
+            <a href="feedBack.html">
+                <li>意见反馈</li>
+            </a>
+            <a href="##">
+                <li>联系我们</li>
+            </a>
+            <a href="##">
+                <li>分享我们</li>
+            </a>
+            <a href="##">
+                <li>关于我们</li>
+            </a>
+        </ol>
+    </div>
+</div>
+<div class="index-navbox">
+    <ul class="index-nav clearfix">
+        <a href="../index.html">
+            <li class="index-nav1 fl">首页</li>
+        </a>
+        <a href="../newest/activityList.html">
+            <li class="index-nav2 fl">活动列表</li>
+        </a>
+        <a href="personalCenter.html">
+            <li class="index-nav3 active fl">我的</li>
+        </a>
+    </ul>
+</div>
+</body>
+
+<script>
+    $(function () {
+
+        //店名地址的ul宽度
+        shopWidth()
+        function shopWidth() {
+            var _widthli = $('.index-shop li').outerWidth(true);
+            _num = $('.index-shop li').length;
+            _width = _widthli * _num;
+            _widthli1 = $('.index-shop li').width();
+            $('.index-shop').width(_width + (_widthli - _widthli1))
+        }
+
+        //分页
+        swiper();
+        function swiper() {
+            new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+
+                // 如果需要分页器
+                pagination: '.swiper-pagination'
+            })
+        }
+
+
+        //判断会员等级
+        Member();
+        function Member() {
+            var _level =4;   //0普通会员 1银卡会员 2金卡会员 3钻石卡会员
+            if (_level == 0) {
+                console.log(0)
+                $('.personalData-currentlevel').addClass('putong');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('putong');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是普通会员');
+
+            } else if (_level == 1) {
+                console.log(1)
+                $('.personalData-currentlevel').addClass('baiyin');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('baiyin');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是银卡会员');
+
+            } else if (_level == 2) {
+                console.log(2)
+                $('.personalData-currentlevel').addClass('huangjin');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('huangjin');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是金卡会员');
+
+            } else if (_level == 3) {
+                console.log(3)
+                $('.personalData-currentlevel').addClass('zuanshi');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('zuanshi');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是钻石卡会员');
+            } else if (_level == 4) {
+                console.log(4)
+                $('.personalData-currentlevel').addClass('xinyonghu');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('xinyonghu');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是普通用户');
+            }
+        }
+    })
+</script>
+</html>

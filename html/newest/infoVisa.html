@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color: #eff2f7">
+<div class="infoPeople-box">
+    <div class="infoPeople-top">
+        <div class="infoPeople-topl marginr28 fl">
+            <div class="infoPeople-topl-time">2</div>
+            <div class="infoPeople-topl-time2">成人</div>
+        </div>
+        <div class="infoPeople-topl marginr28 fl">
+            <div class="infoPeople-topl-time">1</div>
+            <div class="infoPeople-topl-time2">儿童</div>
+        </div>
+        <div class="infoPeople-topl fl">
+            <div class="infoPeople-topl-time">2016年12月5日</div>
+            <div class="infoPeople-topl-time2">出发日期</div>
+        </div>
+        <div class="infoPeople-topm2 fl"></div>
+        <div class="infoPeople-topr fr">
+            <div class="infoPeople-topr-price">￥16000</div>
+            <div class="infoPeople-topr-price2">
+                总额明细
+            </div>
+        </div>
+    </div>
+
+    <div class="infoVisa-title">美国小学13日行程</div>
+    <div class="infoPeople-main">
+        <div class="infoVisa-visatitle">签证</div>
+        <div class="infoVisa">
+            <div class="infoVisa1 clearfix">
+                <div class="fl">美国个人游学签证（上海送签）</div>
+                <div class="fr"><span style="color:#f35849;">¥999</span>/人</div>
+            </div>
+            <div class="infoPeople-num clearfix">
+                <div class="infoPeople-minus fl"></div>
+                <input type="text" class="infoPeople-mounts fl" maxlength="4" value="1">
+                <div class="infoPeople-add fl"></div>
+            </div>
+        </div>
+        <div class="infoVisa">
+            <div class="infoVisa1 clearfix">
+                <div class="fl">美国个人游学签证（上海送签）</div>
+                <div class="fr"><span style="color:#f35849;">¥999</span>/人</div>
+            </div>
+            <div class="infoVisa-num clearfix">
+                <div class="infoPeople-minus fl"></div>
+                <input type="text" class="infoPeople-mounts fl" maxlength="4" value="1">
+                <div class="infoPeople-add fl"></div>
+            </div>
+        </div>
+    </div>
+    <div class="infoPeople-main margintop20 paddingbottom45">
+        <div class="infoVisa-insurancetitle">保险</div>
+        <p class="infoVisa-insurance">保险价格均为参考价格，最终会以预订人真实年龄重新计算</p>
+        <div class="infoVisa-insurance2 clearfix">
+            <div class="infoVisa-insurance2l fl">平安保险境内高原游保险平安保险境内高原游保险</div>
+            <div class="fr infoVisa-insurance2r"><span style="color:#f35849;">¥999</span>/人x<span>3</span></div>
+        </div>
+    </div>
+    <!--<div class="infoPeople-tips">
+        关于儿童定价的特别提醒：<br/>
+        儿童定价标准：年龄2-12岁，不占床，含往返机票，半价，正餐，不含门票，早餐
+    </div>-->
+    <a href="infoData.html">
+        <div class="infoPeople-btn margintop140">下一步
+        </div>
+    </a>
+</div>
+<div class="layerbox">
+    <div class="money-details">
+        <div class="money-details-title">费用明细
+            <span class="layerbox-xx"></span>
+        </div>
+        <div class="money-details-title2 clearfix">
+            <div class="fl font">基本团费</div>
+            <div class="fr font">￥421411</div>
+        </div>
+        <div class="money-details-de">
+            <div class="money-details-de1 clearfix">
+                <div class="fl font2">成人</div>
+                <div class="fr font2">￥31818/人*2</div>
+            </div>
+            <div class="money-details-de1 clearfix">
+                <div class="fl font2">儿童</div>
+                <div class="fr font2">￥31818/人*2</div>
+            </div>
+        </div>
+        <div class="clearfix money-details-all">
+            <div class="fl font">总额</div>
+            <div class="fr font2">￥421411</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        add()// 数量增加
+        function add() {
+            $('.infoPeople-box').on('click', '.infoPeople-add', function () {
+                var num = $(this).siblings('input').val();
+                num++
+                $(this).siblings('input').val(num);
+            })
+        }
+
+        minus()// 数量减少
+        function minus() {
+            $('.infoPeople-minus').on('click', function () {
+                var num = $(this).siblings('input').val();
+                if (num > 1) {
+                    num--
+                } else {
+                    num = 1
+                }
+                $(this).siblings('input').val(num);
+            })
+        }
+
+
+        $('.infoPeople-mounts').keyup(function () {
+            var num = $(this).val();
+            if (num < 1) {
+                $(this).val(1);
+            } else {
+                $(this).val(num);
+            }
+
+        });
+
+        //总额明细
+        totalAmount();
+        function totalAmount() {
+            $('.infoPeople-topr').on('click', function () {
+                $('.layerbox').show();
+                lyheight();
+            });
+
+            $('body').on('click', '.layerbox-xx', function () {
+                $('.layerbox').hide();
+            });
+
+            //判断弹出框高度
+            function lyheight() {
+                var _height = $('.money-details').height();
+                console.log(_height);
+                $('.money-details').css('margin-top', -(_height / 2));
+            }
+        }
+
+
+        //同意保险
+        insurance();
+
+
+        function insurance() {
+            var a = true;
+            $('.infoVisa-insurance2').on('click', function () {
+                if (a) {
+                    $(this).addClass('active');
+                    a = false;
+                } else {
+                    $(this).removeClass('active');
+                    a = true;
+                }
+
+            })
+        }
+    })
+</script>
+</html>

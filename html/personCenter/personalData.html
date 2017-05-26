@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color: #eff2f7">
+<div class="personalData-box">
+    <div class="personalData-top">
+        <div class="personalData-caroutbox">
+            <div class="personalData-carbox clearfix">
+                <div class="personalData-prevlevel fl">
+                    <div class="personalData-leveautograph3">快来添加自己的个性签名吧！</div>
+                </div>
+                <div class="personalData-currentlevel fl">
+                    <div class="personalData-currentlevelbox clearfix">
+                        <div class="personalData-levelquan fl">
+                            <div class="personalData-levelquanimg"
+                                 style="background-image: url('../../img/logo45.png')"></div>
+                        </div>
+                        <div class="fl marginl28 margintop20">
+                            <div class="personalData-levelname">星梦无尘</div>
+                            <div class="personalData-level">您当前是普通会员</div>
+                        </div>
+                    </div>
+                    <a href="signature.html">
+                        <div class="personalData-leveautograph">快来添加自己的个性签名吧！</div>
+                    </a>
+                </div>
+                <div class="personalData-nextlevel fl">
+                    <div class="personalData-currentlevelbox2 clearfix">
+                        <div class="personalData-levelquan2 fl">
+                            <div class="personalData-levelquanimg2"
+                                 style="background-image: url('../../img/logo45.png')"></div>
+                        </div>
+                        <!--<div class="fl marginl28 margintop20">-->
+                        <!--<div class="personalData-levelname">星梦无尘</div>-->
+                        <!--<div class="personalData-level">您当前是普通会员</div>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="personalData-leveautograph2">快来添加自己的个性签名吧！</div>
+                </div>
+            </div>
+        </div>
+        <p class="personalData-topp marginb13 margintop15">累计消费0.00元</p>
+        <p class="personalData-topp">再消费399即可升级金牌会员</p>
+    </div>
+    <div class="personalData-main clearfix">
+        <div class="personalData-mainl fl">
+            <ul>
+                <li>头像</li>
+                <li>昵称</li>
+                <li>性别</li>
+                <li>绑定手机</li>
+            </ul>
+        </div>
+        <div class="personalData-mainr fl">
+            <ul>
+                <li class="personali1"><span class="personalData-mainr-ownlogo"
+                                             style="background-image: url('../../img/logo44.png')"></span></li>
+                <a href="Name.html">
+                    <li>练武星辰</li>
+                </a>
+                <a href="Sex.html">
+                    <li>性别</li>
+                </a>
+                <a href="BindNewPhone.html">
+                    <li>12345646543</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="personalData-main margintop20 clearfix">
+        <div class="personalData-mainl fl">
+            <ul>
+                <li>宝宝信息</li>
+                <li>地区</li>
+            </ul>
+        </div>
+        <div class="personalData-mainr fl">
+            <ul>
+                <a href="baobInfo.html">
+                    <li>练武星辰</li>
+                </a>
+                <a href="../newest/cityChoice.html">
+                    <li>设置</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="personalData-btn">退出登录</div>
+</div>
+
+</body>
+
+<script>
+    $(function () {
+        //判断会员等级
+        Member();
+        function Member() {
+            var _level = 4;   //0普通会员 1银卡会员 2金卡会员 3钻石卡会员
+            if (_level == 0) {
+                console.log(0)
+                $('.personalData-currentlevel').addClass('putong');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('putong');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是普通会员');
+                $('.personalData-prevlevel').addClass('xinyonghu');
+                $('.personalData-nextlevel').addClass('baiyin');
+                $('.personalData-prevlevel').show();
+            } else if (_level == 1) {
+                console.log(1)
+                $('.personalData-currentlevel').addClass('baiyin');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('baiyin');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是银卡会员');
+                $('.personalData-prevlevel').addClass('putong');
+                $('.personalData-nextlevel').addClass('huangjin');
+                $('.personalData-prevlevel').show();
+            } else if (_level == 2) {
+                console.log(2)
+                $('.personalData-currentlevel').addClass('huangjin');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('huangjin');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是金卡会员');
+                $('.personalData-prevlevel').addClass('baiyin');
+                $('.personalData-nextlevel').addClass('zuanshi');
+                $('.personalData-prevlevel').show();
+            } else if (_level == 3) {
+                console.log(3)
+                $('.personalData-currentlevel').addClass('zuanshi');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('zuanshi');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是钻石卡会员');
+                $('.personalData-prevlevel').addClass('huangjin');
+                $('.personalData-nextlevel').hide();
+                $('.personalData-prevlevel').show();
+            }else if (_level == 4) {
+                console.log(4)
+                $('.personalData-currentlevel').addClass('xinyonghu');
+                $('.personalData-currentlevel').find('.personalData-level').addClass('xinyonghu');
+                $('.personalData-currentlevel').find('.personalData-level').text('您当前是普通用户');
+                $('.personalData-prevlevel').hide();
+                $('.personalData-nextlevel').addClass('putong');
+                $('.personalData-currentlevel').addClass('marginleft');
+
+
+            }
+        }
+    })
+</script>
+</html>

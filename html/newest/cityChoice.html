@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body>
+<div class="cityChioce-box">
+    <div class="cityChioce-searchbox">
+        <a class="quxiao fl" href="javascript:;">取消</a>
+        <input class="cityChioce-search fl" placeholder="您所在的地区">
+        <!--<div class="cityChioce-menu fr"></div>-->
+        <div class="cityChioce-logo"></div>
+    </div>
+    <div class="cittChioce-current">
+        <div class="cittChioce-currenttitle">当前定位</div>
+        <div class="cittChioce-currentmain clearfix">
+            <div class="cittChioce-currentmainadd fl">杭州</div>
+            <div class="fr dingwei">重新定位
+                <div class="dingweilogo">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cittChioce-current">
+        <div class="cittChioce-currenttitle">热门城市</div>
+        <div class="hotcity-box ">
+            <ul class="hotcity-main clearfix">
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+                <li class="hotcityli">北京市</li>
+            </ul>
+
+
+        </div>
+    </div>
+    <div class="cittChioce-allcity">
+        <div class="cittChioce-allcitytitle">A</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+    </div>
+    <div class="cittChioce-allcity">
+        <div class="cittChioce-allcitytitle">A</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+        <div class="cittChioce-allcitymain">杭州</div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+
+        prevPage()
+        //返回上一页
+        function prevPage() {
+            $('.quxiao').on('click',function () {
+                location.href=history.go(-1)
+            })
+        }
+
+    })
+</script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+
+    <link rel="stylesheet" href="../../css/datetime/mobiscroll.css">
+    <link rel="stylesheet" href="../../css/datetime/mobiscroll_002.css">
+    <link rel="stylesheet" href="../../css/datetime/mobiscroll_003.css">
+    <link rel="stylesheet" href="../../css/datetime/colorxiugai.css">
+
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/plug-in/datetime/mobiscroll_002.js"></script>
+    <script src="../../js/plug-in/datetime/mobiscroll_004.js"></script>
+    <script src="../../js/plug-in/datetime/mobiscroll.js"></script>
+    <script src="../../js/plug-in/datetime/mobiscroll_003.js"></script>
+    <script src="../../js/plug-in/datetime/mobiscroll_005.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color: #eff2f7">
+<div class="infoPeople-box invoice-box">
+    <div class="infoPeople-main">
+        <div class="infoVisa-visatitle infoData-visatitle margintop20">礼品卡等消费券支付金额不提供报销凭证</div>
+        <div class="infoData-contacts clearfix">
+            <div class="infoData-contactsl fl">
+                <div class="infoData-contactsltitle">发票抬头</div>
+
+            </div>
+            <ul class="infoData-contactsr fl infoData2-contactsr">
+                <li class="infoData2-sex clearfix invoice-li">
+                    <div class="sex marginr86 fl active">个人</div>
+                    <div class="sex fl">公司</div>
+                </li>
+            </ul>
+        </div>
+        <div class="invoice-top"><input type="text" placeholder="请输入发票抬头"></div>
+        <div class="invoice-bottom clearfix">
+            <div class="infoData-contactsltitle fl invoice-title">发票明细</div>
+            <div class="infoData-contactsltitle fl invoice-title-select">
+                <select name="" id="">
+                    <option value="">服务费</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</div>
+<a href="infoData.html">
+    <div class="baobInfo2-submit">
+        保&nbsp;&nbsp;存
+    </div>
+</a>
+</body>
+
+<script>
+    $(function () {
+        sexchioce(); //性别选择
+        function sexchioce() {
+            $('.sex').on('click', function () {
+                $(this).addClass('active');
+                $(this).siblings('.sex').removeClass('active')
+            })
+        }
+
+        //时间日期
+        datetime();
+        function datetime() {
+            var currYear = (new Date()).getFullYear();
+            var opt = {};
+            opt.date = {preset: 'date'};
+            opt.datetime = {preset: 'datetime'};
+            opt.time = {preset: 'time'};
+            opt.default = {
+                theme: 'android-ics light', //皮肤样式
+                display: 'modal', //显示方式
+                mode: 'scroller', //日期选择模式
+                dateFormat: 'yyyy-mm-dd',
+                lang: 'zh',
+                showNow: true,
+                nowText: "今天",
+                startYear: currYear - 10, //开始年份
+                endYear: currYear + 10 //结束年份
+            };
+
+            $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+        }
+
+    })
+</script>
+</html>

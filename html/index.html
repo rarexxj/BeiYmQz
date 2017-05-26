@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../js/plug-in/swiper.jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+<div class="index-box">
+    <div class="index-header clearfix">
+        <a href="newest/cityChoice.html">
+            <div class="index-banner-l fl">
+                <span class="index-banner-address fl">杭州</span>
+                <div class="index-banner-addresslogo fl"></div>
+            </div>
+        </a>
+
+        <a href="newest/search.html">
+            <div class="index-banner-r fr">
+                <div class="index-bannerlogo2 fl"></div>
+                <!--<div class="index-bannerlogo3 fl"></div>-->
+            </div>
+        </a>
+        <div class="index-logo">
+        </div>
+    </div>
+    <div class="swiper-container">
+        <ul class="index-banner swiper-wrapper">
+            <a href="newest/details.html">
+                <li class="index-bannerimg swiper-slide" style="background-image: url('../img/img1.png')"></li>
+            </a>
+        </ul>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+        </div>
+    </div>
+    <div class="index-shopbox">
+        <div class="index-introduce clearfix" style="">
+            <div class="index-introducelogo fl"></div>
+            <div class="index0introducetext fl">下午好，婧瑶蜗牛。<br/>万圣节要到了，带孩子做些什么呢？
+            </div>
+        </div>
+
+        <div class="index-shop-scroll">
+            <ul class="index-shop clearfix">
+                <li class="index-shopli">
+                    <a href="##">
+                        <div class="index-shop-logo5" style="background-image: url('../img/logo5.png')"></div>
+                        <span>杭州</span>
+                    </a>
+                </li>
+                <li class="index-shopli">
+                    <a href="##">
+                        <div class="index-shop-logo6" style="background-image: url('../img/logo6.png')"></div>
+                        <span>爱尔兰</span>
+                    </a>
+                </li>
+                <li class="index-shopli">
+                    <a href="##">
+                        <div class="index-shop-logo7" style="background-image: url('../img/logo7.png')"></div>
+                        <span>安达</span>
+                    </a>
+                </li>
+                <li class="index-shopli">
+                    <a href="##">
+                        <div class="index-shop-logo8" style="background-image: url('../img/logo8.png')"></div>
+                        <span>新西兰</span>
+                    </a>
+                </li>
+                <li class="index-shopli">
+                    <a href="##">
+                        <div class="index-shop-logo12" style="background-image: url('../img/logo12.png')"></div>
+                        <span>北海</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="index-activity">
+        <div class="index-activity-titlebox clearfix">
+            <a href="newest/activityList.html">
+                <div class="index-activity-title fl">
+                    精彩活动
+                </div>
+            </a>
+        </div>
+        <div class="index-activity-mainbox">
+            <a href="newest/details.html">
+                <div>
+                    <div class="index-activity-banner" style="background-image: url('../img/img2.png')"></div>
+                    <span class="Newest-activity"></span>
+                </div>
+                <div class="index-activity-main">
+                    <div class="index-activity-introduce">推荐理由：让您孩子和您一起体验成长的快乐，无限快乐，无限快乐，无限快乐，无限快乐，无限快乐
+                    </div>
+                    <div class="index-activity-mainbottom clearfix">
+                        <div class="index-activity-mainbottom-l fl">
+                            <span class="fuhao fl">￥</span>
+                            <div class="index-activity-price fl">16000</div>
+                        </div>
+                        <div class="index-activity-mainbottom-r fr">
+                            <div class="index-activity-see fl">8888
+                            </div>
+                            <div class="index-activity-collection fl">123
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-activity-bottombg"></div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="index-navbox">
+    <ul class="index-nav clearfix">
+        <a href="index.html">
+            <li class="index-nav1 active fl">首页</li>
+        </a>
+        <a href="newest/activityList.html">
+            <li class="index-nav2 fl">活动列表</li>
+        </a>
+        <a href="personCenter/personalCenter.html">
+            <li class="index-nav3 fl">我的</li>
+        </a>
+    </ul>
+</div>
+</body>
+
+<script>
+    $(function () {
+
+        //店名地址的ul宽度
+        shopWidth()
+        function shopWidth() {
+            var _widthli = $('.index-shop li').outerWidth(true);
+            _num = $('.index-shop li').length;
+            _width = _widthli * _num;
+            _widthli1 = $('.index-shop li').width();
+            $('.index-shop').width(_width + (_widthli - _widthli1))
+        }
+
+        //分页
+        swiper();
+        function swiper() {
+            new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+
+                // 如果需要分页器
+                pagination: '.swiper-pagination'
+            })
+        }
+
+        //字数超出省略
+        font();
+        function font() {
+            var _num = $('.index-activity-introduce').html();
+            if (_num.length > 50) {
+                $('.index-activity-introduce').html(_num.substr(0, 50) + '...');
+            }
+        }
+    })
+</script>
+</html>

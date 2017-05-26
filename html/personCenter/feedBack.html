@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="杭州博采网络科技股份有限公司-高端网站建设-http://www.bocweb.cn"/>
+    <meta name="renderer" content="webkit">
+    <title>亲子yo</title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <script src="../../js/plug-in/jquery-1.11.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+
+<body style="background-color: #eff2f7">
+<div class="feedBack-box">
+    <div class="feedBack-topbox">
+        选择反馈类型
+    </div>
+    <div class="infoData2-sex clearfix feedBack-check">
+        <div class="sex marginr82 fl active">产品建议</div>
+        <div class="sex marginr82 fl">程序错误</div>
+        <div class="sex fl">内容建议</div>
+    </div>
+    <div class="orderEvaluation-bottom margintop20">
+        <textarea name="" placeholder="您的意见或建议非常宝贵，我们将为您不断改进。"></textarea>
+    </div>
+    <div class="feedBack-phone margintop20">
+        <input type="text" placeholder="请输入您的手机号码或者邮箱">
+    </div>
+
+</div>
+<div class="orderEvaluation-btn">提交</div>
+
+</body>
+
+<script>
+    $(function () {
+        checkchioce(); //选择
+        function checkchioce() {
+            $('.sex').on('click', function () {
+                $(this).addClass('active');
+                $(this).siblings('.sex').removeClass('active')
+            })
+        }
+
+    })
+</script>
+</html>
